@@ -1,0 +1,1198 @@
+# SMARTROUTE – COMPLETE APPLICATION AUDIT, BUG FIXING, FEATURE IMPLEMENTATION AND FINALIZATION
+
+Act as a senior full-stack software architect, React developer, UI/UX designer, database architect, QA engineer and school transportation domain expert.
+
+You are working on my EXISTING application:
+
+SMARTROUTE – SCHOOL TRANSPORT MANAGEMENT SYSTEM
+
+Your task is to inspect, repair, improve, complete and test the entire existing application.
+
+I want the application to become a professional, realistic, fully functional School Transport Management System that a real school in Coimbatore, Tamil Nadu, could use.
+
+THIS IS A CODE IMPLEMENTATION TASK.
+
+Do not just give suggestions, explanations, plans or sample code. Modify the existing source code and implement the required functionality.
+
+==================================================
+PART 1: CRITICAL IMPLEMENTATION INSTRUCTIONS
+==================================================
+
+1. Inspect the complete existing codebase before making changes.
+2. Understand the current component structure, routes, services, state management and data models.
+3. Preserve all working functionality.
+4. Fix existing errors before adding features.
+5. Reuse existing components wherever appropriate.
+6. Avoid unnecessary rewriting of the application.
+7. Do not create duplicate pages, services, components or data models.
+8. Ensure all modules use one consistent central data source.
+9. Ensure every important button, form, navigation item and action works.
+10. Do not leave major modules as static UI mockups.
+11. Do not remove existing features simply because they are difficult to fix.
+12. Do not introduce unnecessary dependencies.
+13. Do not stop after implementing the dashboard.
+14. Do not ask me questions. Make sensible implementation decisions based on the existing application and this specification.
+15. Run the application and resolve all possible errors before finishing.
+
+If the response or implementation process has limitations, prioritize a working, consistent application over adding more decorative features.
+
+==================================================
+PART 2: FIX ALL EXISTING RUNTIME ERRORS
+==================================================
+
+The application currently has this runtime error:
+
+Uncaught ReferenceError: attendance is not defined
+
+Component:
+AdminDashboard
+
+Fix this first.
+
+Requirements:
+
+- Inspect every reference to attendance.
+- Identify the correct attendance data source.
+- Define derived attendance summaries correctly.
+- Calculate attendance from actual attendance records.
+- Handle empty attendance records.
+- Prevent division-by-zero errors.
+- Do not simply remove the attendance section.
+- Ensure all dashboard cards use real derived data.
+
+Inspect the complete project for:
+- Undefined variables.
+- Missing imports.
+- Missing exports.
+- Invalid React hooks.
+- Incorrect hook ordering.
+- Missing React keys.
+- Invalid component properties.
+- Incorrect route definitions.
+- Broken imports.
+- Incorrect TypeScript types.
+- Invalid state updates.
+- Stale state.
+- Incorrect localStorage parsing.
+- Missing error handling.
+- Runtime exceptions.
+- Broken forms.
+- Invalid date calculations.
+- Incorrect array and object references.
+
+Also inspect and resolve the Vite configuration warning involving __dirname in vite.config.ts if it can be safely corrected for the existing environment.
+
+Do not change working Vite configuration unnecessarily.
+
+The application must start successfully and all four dashboards must render without runtime errors.
+
+==================================================
+PART 3: APPLICATION IDENTITY AND LOCALIZATION
+==================================================
+
+The application must represent an Indian school transport management platform.
+
+School:
+Kovai Valley Matriculation School
+
+Location:
+Coimbatore, Tamil Nadu, India.
+
+Use realistic fictional Indian names:
+- Thiru S. Ramanathan
+- K. Murugesan
+- Priya R
+- Arjun Kumar
+- Ananya Kumar
+- Keerthana Kumar
+- Naveen Kumar
+- Divya Lakshmi
+- Harish Raj
+- Sanjay Kumar
+
+Use actual Coimbatore locality names:
+- Gandhipuram
+- Peelamedu
+- Saravanampatti
+- RS Puram
+- Saibaba Colony
+- Singanallur
+- Vadavalli
+- Ganapathy
+- Kuniyamuthur
+- Race Course
+- Kalapatti
+- Avinashi Road
+- Hope College
+- Thudiyalur
+- Ukkadam
+- Ramanathapuram
+
+Localization:
+- Currency: INR (₹).
+- Phone numbers: Indian +91 format.
+- Vehicle registration: Tamil Nadu formats such as TN 38, TN 37, TN 66 and TN 40.
+- Dates: DD-MM-YYYY.
+- Time zone: Asia/Kolkata.
+- Time display: 12-hour format.
+- Academic year: Indian academic year format.
+- Classes: LKG, UKG and Classes 1–12.
+- Language: English and Tamil.
+
+All sample records must be fictional.
+
+Do not use foreign names, foreign vehicle numbers, foreign schools or irrelevant geographical locations.
+
+Do not display real-time traffic or GPS claims unless those integrations actually exist.
+
+==================================================
+PART 4: PROFESSIONAL USER INTERFACE
+==================================================
+
+Preserve and improve the existing professional SmartRoute design.
+
+Visual style:
+- Premium SaaS dashboard.
+- Navy blue and white.
+- Royal blue primary buttons.
+- Light grey backgrounds.
+- White cards.
+- Consistent spacing.
+- Professional typography.
+- Subtle shadows.
+- Rounded cards.
+- Modern tables.
+- Status badges.
+- Responsive sidebar.
+- Responsive top navigation.
+- Clean forms.
+- Search and filtering.
+- Confirmation dialogs.
+- Toast notifications.
+- Loading states.
+- Empty states.
+- Error states.
+
+The application must look like commercially developed school management software.
+
+Do not include:
+- Project introduction.
+- Project overview.
+- Problem statement.
+- Objectives.
+- Methodology.
+- College details.
+- Team information.
+- Academic presentation pages.
+- Separate innovation page.
+
+The website must open with the login page.
+
+==================================================
+PART 5: AUTHENTICATION AND ACCESS CONTROL
+==================================================
+
+Implement proper login-first authentication.
+
+Four roles:
+
+1. Administrator
+2. Driver
+3. Parent
+4. Student
+
+Login requirements:
+- Email.
+- Password.
+- Show/hide password.
+- Remember session.
+- Forgot password interface.
+- Login validation.
+- Invalid credentials message.
+- Loading state.
+- Logout.
+- Role-based redirection.
+
+Never automatically log in a user.
+
+Remove:
+- Switch Demo Role button.
+- Role selection in authenticated navigation.
+- Default Parent login.
+- Default Administrator login.
+- Hardcoded automatic user selection.
+
+Create a centralized authentication service.
+
+Each account must contain:
+- Unique user ID.
+- Email.
+- Password credential.
+- Role.
+- Account status.
+- Linked profile ID.
+
+For this frontend demonstration, simulated authentication is acceptable, but clearly separate it from real authentication.
+
+Do not claim localStorage authentication is production-secure.
+
+Protect application routes:
+- Unauthenticated users go to login.
+- Administrators access authorized administrative modules.
+- Drivers access assigned routes, trips and attendance.
+- Parents access only their own children.
+- Students access only their own information in read-only mode.
+
+Do not trust role values from URL parameters or frontend dropdowns.
+
+Implement a consistent logout process that clears the session and returns to login.
+
+Create demo credentials for all four roles and display them only in an expandable section on the login page.
+
+==================================================
+PART 6: CORRECT PARENT AND STUDENT DATA RELATIONSHIPS
+==================================================
+
+This is extremely important.
+
+One parent can have multiple children.
+
+For example:
+
+Parent:
+Priya R
+
+Children:
+- Arjun Kumar – Class 7-A.
+- Ananya Kumar – Class 4-B.
+- Keerthana Kumar – Class 4-B.
+- Naveen Kumar – Class 1-A.
+
+The parent must log in once and see all four children.
+
+Implement:
+- Parent-to-child one-to-many relationship.
+- Individual student records.
+- Individual transport allocations.
+- Individual bus assignments.
+- Individual routes.
+- Individual pickup points.
+- Individual attendance.
+- Individual handover policies.
+
+Create a child selector in the parent dashboard.
+
+When the parent selects a child, update every relevant section:
+- Profile.
+- Bus.
+- Driver.
+- Route.
+- Pickup point.
+- Attendance.
+- Trip history.
+- Notices.
+- Complaints.
+- Safety timeline.
+- Handover status.
+
+The parent must never see another family's children.
+
+A student account must be linked to exactly one student record.
+
+If Arjun logs in, every student dashboard component must display Arjun's information.
+
+Do not show Keerthana or another student's information in Arjun's bus pass.
+
+Never hardcode different student names in separate dashboard components.
+
+Use the authenticated user's linked profile and central data service.
+
+==================================================
+PART 7: ADMINISTRATOR MODULES
+==================================================
+
+Create fully functional administrator modules.
+
+Sidebar:
+
+1. Dashboard
+2. Students
+3. Parents
+4. Buses
+5. Drivers
+6. Routes & Pickup Points
+7. Transport Allocation
+8. Trip Scheduling
+9. Attendance
+10. Trip Management
+11. Handover Monitoring
+12. Route Disruptions
+13. Complaints
+14. Notices
+15. Reports & Analytics
+16. User Management
+17. Settings
+
+A. ADMIN DASHBOARD
+
+Display:
+- Total students.
+- Total parents.
+- Total buses.
+- Total drivers.
+- Active routes.
+- Allocated students.
+- Today's attendance.
+- Active trips.
+- Pending handovers.
+- Missed boarding alerts.
+- Active complaints.
+- Route disruption alerts.
+
+Include:
+- Attendance chart.
+- Bus utilization chart.
+- Route-wise student distribution.
+- Recent trips.
+- Pending handovers.
+- Missed boarding alerts.
+- Complaint summaries.
+- Transport notices.
+
+All values must be calculated from actual records.
+
+Clicking a dashboard statistic must navigate to the corresponding filtered records.
+
+B. STUDENT MANAGEMENT
+
+Student fields:
+- Student ID.
+- Name.
+- Class.
+- Section.
+- Roll number.
+- DOB.
+- Gender.
+- Parent.
+- Parent contact.
+- Pickup point.
+- Route.
+- Bus.
+- Handover policy.
+- Transport status.
+
+Implement complete CRUD, validation, search, filtering, sorting and student detail views.
+
+C. PARENT MANAGEMENT
+
+Implement:
+- Add parent.
+- Edit parent.
+- View parent.
+- Link multiple children.
+- Remove child association safely.
+- View linked children.
+- Manage guardian details.
+- Manage authorized pickup persons.
+- Parent account activation/deactivation.
+
+Prevent duplicate parent accounts.
+
+D. BUS MANAGEMENT
+
+Bus fields:
+- Bus ID.
+- Registration number.
+- Model.
+- Seating capacity.
+- Assigned driver.
+- Assigned route.
+- Occupancy.
+- Insurance expiry.
+- Permit expiry.
+- Maintenance status.
+- Operational status.
+
+Implement:
+- Add.
+- Edit.
+- Delete.
+- View.
+- Search.
+- Filter.
+- Capacity validation.
+- Occupancy calculation.
+- Available seat calculation.
+- Expiry alerts.
+- Maintenance alerts.
+
+Never allow capacity overflow.
+
+E. DRIVER MANAGEMENT
+
+Fields:
+- Driver ID.
+- Name.
+- Phone.
+- Email.
+- Address.
+- Licence number.
+- Licence expiry.
+- Experience.
+- Assigned bus.
+- Employment status.
+
+Implement CRUD, validation, duplicate licence prevention and trip history.
+
+F. ROUTE MANAGEMENT
+
+Fields:
+- Route ID.
+- Route name.
+- Starting location.
+- Destination.
+- Ordered pickup points.
+- Estimated distance.
+- Estimated duration.
+- Bus.
+- Driver.
+- Status.
+
+Implement:
+- Create routes.
+- Edit routes.
+- Delete routes.
+- Add pickup points.
+- Remove pickup points.
+- Reorder pickup points.
+- Assign buses.
+- Assign drivers.
+- View students on each route.
+- Route utilization.
+
+Include a schematic route display or map-style interface.
+
+Do not display fake live vehicle positions.
+
+G. TRANSPORT ALLOCATION
+
+Allow the administrator to:
+- Assign students to routes.
+- Assign buses.
+- Assign pickup points.
+- Change allocations.
+- Cancel allocations.
+- View allocation history.
+
+Business rules:
+- No duplicate active allocation.
+- Bus capacity validation.
+- Valid route and bus association.
+- Available seats displayed before confirmation.
+- Automatic occupancy updates.
+- Allocation history preserved.
+
+H. TRIP SCHEDULING
+
+Allow administrators to schedule:
+- Morning pickup trips.
+- Afternoon return trips.
+
+Each trip must include:
+- Trip ID.
+- Date.
+- Trip type.
+- Bus.
+- Driver.
+- Route.
+- Scheduled start.
+- Expected completion.
+- Status.
+
+Do not combine morning and afternoon trips into one attendance record.
+
+==================================================
+PART 8: DRIVER PORTAL
+==================================================
+
+The driver must only access assigned trips and routes.
+
+Driver dashboard:
+- Assigned bus.
+- Vehicle registration.
+- Assigned route.
+- Today's trips.
+- Passenger count.
+- Passenger manifest.
+- Pickup point sequence.
+- Attendance status.
+- Pickup readiness.
+- Handover status.
+- Delay reporting.
+- Trip history.
+
+Driver operations:
+
+1. View assigned trip.
+2. View passengers.
+3. Mark students boarded.
+4. Mark students absent.
+5. Correct attendance before submission.
+6. Submit attendance.
+7. Start trip.
+8. Report delay.
+9. Add delay reason.
+10. Record stop arrival.
+11. Perform required handover verification.
+12. Complete trip.
+
+The driver must not be able to:
+- Change student allocations.
+- Edit unrelated buses.
+- Access unrelated routes.
+- View unrelated family records.
+- Change administrative settings.
+
+==================================================
+PART 9: ATTENDANCE AND MISSED BOARDING
+==================================================
+
+Attendance is recorded by drivers.
+
+Statuses:
+- Not Marked.
+- Boarded.
+- Absent.
+- Not Expected.
+
+Attendance must be associated with:
+- Student.
+- Trip.
+- Date.
+- Bus.
+- Driver.
+- Route.
+
+Prevent duplicate attendance for the same student and trip.
+
+Calculate:
+- Expected students.
+- Boarded students.
+- Absent students.
+- Attendance percentage.
+- Pending attendance.
+
+When a student is absent:
+- Generate a missed boarding record.
+- Record pickup point.
+- Record expected time.
+- Show the relevant parent.
+- Show administrator alert.
+- Prevent duplicate alerts for the same event.
+
+Keep morning and afternoon attendance separate.
+
+==================================================
+PART 10: SAFE STUDENT HANDOVER
+==================================================
+
+Implement a realistic student handover system.
+
+A student must NOT require a smartphone.
+
+The student must NOT need to scan a QR code or enter a PIN.
+
+Create three configurable dismissal policies:
+
+1. GUARDIAN REQUIRED
+
+- Driver marks arrival at drop-off.
+- Parent is notified through a simulated notification.
+- Authorized guardian provides a one-time PIN.
+- Driver enters PIN.
+- System verifies the PIN.
+- Handover is recorded.
+
+2. AUTHORIZED ADULT REQUIRED
+
+- Parent registers approved pickup persons.
+- Administrator approves the authorized persons.
+- Driver verifies the pickup person according to school policy.
+- Record the handover.
+
+3. INDEPENDENT DISMISSAL
+
+- Parent and school authorize independent dismissal.
+- Driver records the student's dismissal.
+- No guardian PIN is required.
+- Record the driver, time and status.
+
+PIN requirements:
+- Unique one-time PIN.
+- Expiry.
+- Attempt limits.
+- Verification history.
+- No permanent PIN display.
+- No PIN for independent dismissal.
+- No successful handover on incorrect PIN.
+
+For this demo, notification delivery can be simulated.
+
+==================================================
+PART 11: PARENT PORTAL
+==================================================
+
+Parent dashboard:
+
+- Multiple child selector.
+- Child profile.
+- Bus information.
+- Driver information.
+- Route.
+- Pickup point.
+- Scheduled pickup.
+- Scheduled drop-off.
+- Attendance.
+- Trip status.
+- Safety timeline.
+- Handover status.
+- Pickup readiness.
+- Notices.
+- Complaints.
+
+Parent actions:
+- Select child.
+- Mark Ready for Pickup.
+- Mark Not Ready.
+- Report Pickup Person Changed.
+- Submit transport complaint.
+- Track complaint.
+- View attendance.
+- View trip history.
+- View notifications.
+
+Parents must only access their own children's records.
+
+==================================================
+PART 12: STUDENT PORTAL
+==================================================
+
+Student dashboard must be read-only.
+
+Display:
+- Student profile.
+- Digital bus pass.
+- Student ID.
+- Assigned bus.
+- Registration number.
+- Driver information.
+- Route.
+- Pickup point.
+- Scheduled timings.
+- Attendance history.
+- Safety timeline.
+- Notices.
+- Transport guidelines.
+
+Do not require the student to use a phone for attendance or handover.
+
+If a QR code is displayed, it must be an optional school identification feature, not a mandatory smartphone-based attendance mechanism.
+
+==================================================
+PART 13: SMART FEATURES
+==================================================
+
+Integrate intelligent features into their relevant modules.
+
+Do not create a separate Innovation page.
+
+A. SMART ROUTE SUGGESTIONS
+
+- Analyse pickup point sequence.
+- Identify unnecessary route distance using available sample route data.
+- Suggest an alternative stop sequence.
+- Explain the reason.
+- Allow administrator approval.
+- Never apply changes automatically.
+
+B. ATTENDANCE ANALYTICS
+
+- Repeated absence identification.
+- Route-wise attendance.
+- Attendance trends.
+- Unusual patterns.
+- Monthly comparison.
+
+C. BUS CAPACITY OPTIMIZATION
+
+- Underutilized buses.
+- Buses nearing capacity.
+- Unused seats.
+- Route-wise allocation.
+- Possible allocation improvements.
+
+Never suggest an allocation that violates capacity or route rules.
+
+D. DELAY RISK INSIGHTS
+
+- Analyse sample historical trip delays.
+- Identify frequently delayed routes.
+- Show estimated delay risk.
+- Recommend reviewing schedules.
+
+Do not claim live traffic access.
+
+E. COMPLAINT CATEGORIZATION
+
+- Suggest categories from complaint descriptions.
+- Show common complaint types.
+- Display complaint trends.
+- Allow administrator correction.
+
+F. ROUTE DISRUPTION MANAGEMENT
+
+Allow administrators to record:
+- Road closures.
+- Road maintenance.
+- Traffic incidents.
+- Weather-related disruption.
+- Other route issues.
+
+Show affected pickup points and routes.
+
+Suggest alternatives using existing sample route information.
+
+Clearly label manually entered incidents and simulated suggestions.
+
+G. TRANSPORT SAFETY TIMELINE
+
+For each student, record:
+- Scheduled pickup.
+- Boarding.
+- Trip start.
+- Delay.
+- Arrival.
+- Handover verification.
+- Independent dismissal if applicable.
+
+Parents see only their own children's timeline.
+
+H. BILINGUAL NOTICES
+
+Allow notices in English and Tamil.
+
+Categories:
+- General.
+- Bus delay.
+- Route changes.
+- Holiday.
+- Pickup changes.
+- Safety instructions.
+- Emergency information.
+
+==================================================
+PART 14: COMPLAINTS AND NOTICES
+==================================================
+
+COMPLAINTS
+
+Parents can submit:
+- Bus delay.
+- Driver behaviour.
+- Bus condition.
+- Pickup point issue.
+- Attendance issue.
+- Other.
+
+Complaint fields:
+- Complaint ID.
+- Parent.
+- Student.
+- Category.
+- Subject.
+- Description.
+- Date.
+- Priority.
+- Status.
+- Administrative response.
+
+Statuses:
+- Submitted.
+- Under Review.
+- In Progress.
+- Resolved.
+- Rejected.
+
+Administrators can search, filter, update and respond.
+
+NOTICES
+
+Administrators can:
+- Create notices.
+- Edit notices.
+- Delete notices.
+- Select audience.
+- Select language.
+- Set publication date.
+- Set expiry date.
+
+Parents and students see only relevant published notices.
+
+==================================================
+PART 15: REPORTS AND ANALYTICS
+==================================================
+
+Create working reports for:
+
+- Student list.
+- Parent-child relationships.
+- Bus utilization.
+- Driver assignments.
+- Route-wise students.
+- Transport allocations.
+- Daily attendance.
+- Monthly attendance.
+- Trip history.
+- Missed boarding.
+- Handover history.
+- Complaints.
+- Route disruptions.
+
+Requirements:
+- Search.
+- Date filters.
+- Bus filters.
+- Route filters.
+- Status filters.
+- Summary statistics.
+- Interactive charts.
+- CSV export.
+- Print support.
+
+All reports must be calculated from central data.
+
+==================================================
+PART 16: SETTINGS AND USER MANAGEMENT
+==================================================
+
+Implement:
+- School profile.
+- Academic year.
+- Classes and sections.
+- User management.
+- Role permissions.
+- Guardian management.
+- Notification preferences.
+- Handover policy settings.
+- Profile management.
+- Password change interface.
+
+Do not allow unauthorized role changes.
+
+==================================================
+PART 17: DATA MODEL AND ARCHITECTURE
+==================================================
+
+Use a clean modular architecture.
+
+Separate:
+- Components.
+- Pages.
+- Layouts.
+- Services.
+- Types.
+- Hooks.
+- Utilities.
+- Authentication.
+- Demo data.
+- Validation.
+- Routing.
+
+Create or reuse centralized services for:
+
+authService
+studentService
+parentService
+busService
+driverService
+routeService
+allocationService
+tripService
+attendanceService
+handoverService
+complaintService
+noticeService
+notificationService
+analyticsService
+reportService
+
+Ensure all modules use the same records.
+
+Required relationships:
+
+Parent → Multiple Students
+
+Student → One Parent or approved parent association
+
+Student → Transport Allocation
+
+Allocation → Bus, Route and Pickup Point
+
+Bus → Driver and Route
+
+Driver → Assigned Trips
+
+Trip → Attendance Records
+
+Trip → Handover Records
+
+Parent → Complaints
+
+Administrator → School Configuration
+
+Use stable unique IDs.
+
+Do not use array indexes as permanent record identifiers.
+
+Persist demonstration changes using localStorage with:
+- Data versioning.
+- Safe parsing.
+- Initial seed data.
+- Data migration or fallback handling.
+- Consistent updates.
+- No accidental resetting on every render.
+
+Provide a reset-demo-data option only in administrator settings with confirmation.
+
+==================================================
+PART 18: DEMONSTRATION DATA
+==================================================
+
+Use interconnected fictional Coimbatore school data.
+
+Create:
+- At least 50 students.
+- At least 15 parent accounts.
+- At least 5 buses.
+- At least 5 drivers.
+- At least 5 routes.
+- Multiple pickup points.
+- Multiple trips.
+- Morning and afternoon attendance.
+- Sample complaints.
+- Sample notices.
+- Handover policies.
+- Sample handover history.
+- Route disruption records.
+
+Ensure parent-child relationships are realistic.
+
+Include one parent with four children.
+
+Ensure every student-specific record references the correct student.
+
+Ensure every bus assignment references an existing bus and route.
+
+Ensure every trip references a valid bus, driver and route.
+
+Ensure attendance and handover records reference valid trips.
+
+Avoid inconsistent student names between different screens.
+
+Create four demo account types:
+- Administrator.
+- Driver.
+- Parent.
+- Student.
+
+The user must manually enter credentials and click Login.
+
+==================================================
+PART 19: FUTURE BACKEND READINESS
+==================================================
+
+For this initial Google AI Studio frontend demonstration:
+
+Use React, TypeScript, the existing frontend architecture and localStorage.
+
+Do not unnecessarily introduce a second backend.
+
+Keep services structured so they can later be replaced by a Python FastAPI backend.
+
+The intended future architecture:
+
+React + TypeScript
+        ↓
+Python FastAPI
+        ↓
+PostgreSQL
+        ↓
+SQLAlchemy ORM
+
+Prepare clean API service boundaries for:
+- Authentication.
+- Students.
+- Parents.
+- Buses.
+- Drivers.
+- Routes.
+- Allocations.
+- Attendance.
+- Trips.
+- Handovers.
+- Complaints.
+- Notices.
+- Reports.
+- Analytics.
+
+Do not claim actual PostgreSQL integration if it is not implemented.
+
+Do not claim real JWT security if only simulated frontend authentication exists.
+
+For production readiness, the later backend must provide:
+- Password hashing.
+- Server-side authentication.
+- JWT validation.
+- Backend-enforced role permissions.
+- Parent-child access checks.
+- Secure one-time PIN generation and verification.
+- Input validation.
+- Database constraints.
+- Audit logs.
+- Secure notification integration.
+
+==================================================
+PART 20: COMPLETE END-TO-END TESTING
+==================================================
+
+Test all the following workflows.
+
+AUTHENTICATION:
+1. Opening the application displays login.
+2. No automatic login occurs.
+3. Invalid credentials are rejected.
+4. Administrator login works.
+5. Driver login works.
+6. Parent login works.
+7. Student login works.
+8. Logout returns to login.
+9. Unauthenticated access to protected pages is blocked.
+
+ADMINISTRATION:
+10. Add a student.
+11. Edit a student.
+12. Delete a student safely.
+13. Add a parent.
+14. Link four children to one parent.
+15. Add a bus.
+16. Validate bus capacity.
+17. Add a driver.
+18. Create a route.
+19. Add pickup points.
+20. Allocate students.
+21. Prevent duplicate allocations.
+22. Schedule morning and afternoon trips.
+
+DRIVER:
+23. Driver sees only assigned trips.
+24. Driver sees correct passenger manifest.
+25. Driver marks boarded.
+26. Driver marks absent.
+27. Driver submits attendance.
+28. Driver starts a trip.
+29. Driver reports delay.
+30. Driver records drop-off arrival.
+31. Driver verifies required handover.
+32. Driver records independent dismissal.
+33. Driver completes trip.
+
+PARENT:
+34. Parent logs in.
+35. Parent with four children sees all four.
+36. Selecting each child updates all relevant details.
+37. Parent cannot see unrelated students.
+38. Parent views attendance.
+39. Parent views trip status.
+40. Parent submits a complaint.
+41. Parent marks pickup readiness.
+42. Parent views handover status.
+
+STUDENT:
+43. Student sees only their own bus pass.
+44. Student sees correct bus and route.
+45. Student can view attendance.
+46. Student cannot modify records.
+
+SAFETY:
+47. Missed boarding creates an alert.
+48. Invalid PIN does not complete handover.
+49. Valid PIN completes handover.
+50. Expired PIN is rejected.
+51. Independent dismissal does not require PIN.
+52. Safety timeline records the correct events.
+
+ANALYTICS:
+53. Dashboard statistics match the records.
+54. Attendance percentages are correct.
+55. Bus utilization is correct.
+56. CSV export works.
+57. Search and filters work.
+58. Route disruption suggestions are labelled correctly.
+
+SYSTEM:
+59. Refreshing preserves valid demo data.
+60. No default user is created.
+61. No undefined-variable errors occur.
+62. All dashboards render.
+63. All navigation links work.
+64. Responsive layouts work.
+65. No major console errors remain.
+
+==================================================
+PART 21: FINAL QUALITY CHECK
+==================================================
+
+Before finishing:
+
+- Start the development server.
+- Fix all compile errors.
+- Fix all runtime errors.
+- Fix broken navigation.
+- Fix broken forms.
+- Verify the four user roles.
+- Verify parent-child relationships.
+- Verify student data consistency.
+- Verify bus capacity.
+- Verify attendance calculations.
+- Verify handover security logic.
+- Verify trip workflows.
+- Verify reports.
+- Verify persistence.
+- Check desktop and mobile layouts.
+
+Do not leave a major module as "Coming Soon".
+
+Do not display fake live tracking.
+
+Do not display hardcoded statistics when real calculations are available.
+
+Do not display a different student's data in another student's account.
+
+Do not expose guardian PINs permanently.
+
+Do not allow parents to access unrelated families' records.
+
+Do not break existing working features.
+
+At the end, provide a concise implementation summary:
+1. Bugs fixed.
+2. Features completed.
+3. Modules tested.
+4. Any remaining limitations.
+5. Any features that still require a real backend or external integration.
+
+MOST IMPORTANT:
+
+I need a working, consistent, professional school transport management application, not just an attractive UI.
+
+Inspect, implement, integrate, test and finalize the existing SmartRoute application now.

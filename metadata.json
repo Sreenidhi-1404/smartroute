@@ -1,0 +1,6 @@
+{
+  "name": "SmartRoute – School Transport Management System",
+  "description": "Comprehensive school transportation platform managing routes, buses, drivers, student allocations, daily attendance, trip status, complaints, and fleet analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
